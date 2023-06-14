@@ -14,7 +14,14 @@
         <script src="https://unpkg.com/vue@3"></script>
 
         <div id="app">
-            <pre v-if="emailList.length >= 10">{{ emailList }}</pre>
+            <h1>
+                List of emails taken from the Boolean api
+            </h1>
+            <ul v-if="emailList.length >= numberOfEmails">
+                <li v-for="email in emailList">
+                    {{ email }}
+                </li>
+            </ul>
         </div>
 
         <script src="js/script.js"></script>
