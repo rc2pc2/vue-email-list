@@ -10,7 +10,7 @@ createApp({
 
     methods:{
         addNewEmail(){
-            axios.get('https://flynn.boolsean.careers/exercises/api/random/mail')
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then( (result) => {
                 this.emailList.push(result.data.response);
             })
