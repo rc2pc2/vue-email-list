@@ -12,9 +12,14 @@ createApp({
     },
 
     created(){
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-        .then( (result) => {
-            console.log(result);
-        });
+        for (let index = 0; index < 10; index++) {
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+            .then( (result) => {
+                console.log(result.data.response);
+                email = result.data.response;
+                this.emailList.push(email)
+            });
+        }
+
     }
 }).mount('#app');

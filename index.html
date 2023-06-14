@@ -14,7 +14,7 @@
         <script src="https://unpkg.com/vue@3"></script>
 
         <div id="app">
-            <pre>{{ emailList }}</pre>
+            <pre v-if="emailList.length >= 10">{{ emailList }}</pre>
         </div>
 
         <script src="js/script.js"></script>
